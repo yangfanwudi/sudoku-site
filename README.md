@@ -24,7 +24,7 @@ python -m http.server 8080
 
 ## 部署
 
-推送到 GitHub，仓库 Settings → Pages → Deploy from branch `main` / root。站点地址：https://yangfanwudi.github.io/sudoku-site/
+推送到 GitHub，仓库 Settings → Pages → Deploy from branch `main` / root。站点地址：https://sudoku.vocabfan.online/
 
 ## 广告位
 
