@@ -828,6 +828,11 @@ details p{margin:10px 0 0;color:#b8b1cf}
 .page ul,.page ol{padding-left:22px}
 .page .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0}
 .page .cta{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.page table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+.page th,.page td{border:1px solid var(--line);padding:9px 12px;text-align:left;color:#c3bcd8;vertical-align:top}
+.page th{background:rgba(255,255,255,.05);color:#fff;font-weight:600}
+.page .related{list-style:none;padding:0;display:grid;gap:8px;margin:14px 0 0}
+.page .related a{color:#ffd76a}
 .crumbs{font-size:13px;color:#7f7899;margin-bottom:14px}
 .crumbs a{color:#a9a3c2;text-decoration:none}
 .fb-wrap{max-width:860px;margin:0 auto;padding:40px 22px 30px}
