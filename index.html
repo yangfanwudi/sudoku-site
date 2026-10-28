@@ -93,6 +93,7 @@
 
         <!-- 游戏信息 -->
         <div class="game-info">
+            <div class="info-item"><span class="icon">⏱</span><span>用时:</span><span class="value" id="timer">00:00</span></div>
             <div class="info-item">
                 <span class="icon">💣</span>
                 <span>地雷:</span>
@@ -412,6 +413,36 @@
             return { allCorrect, errors };
         }
 
+        // ---------- 计时器 ----------
+        var timerEl = document.getElementById('timer');
+        var timerId = null;
+        var timerStart = 0;
+        var timerElapsed = 0;
+        function pad2(n) { return (n < 10 ? '0' : '') + n; }
+        function fmtTime(sec) {
+            sec = Math.max(0, Math.floor(sec || 0));
+            var h = Math.floor(sec / 3600);
+            var m = Math.floor((sec % 3600) / 60);
+            var s = sec % 60;
+            return h > 0 ? h + ':' + pad2(m) + ':' + pad2(s) : pad2(m) + ':' + pad2(s);
+        }
+        function tickTimer() {
+            if (!timerEl) return;
+            timerElapsed = Math.floor((Date.now() - timerStart) / 1000);
+            timerEl.textContent = fmtTime(timerElapsed);
+        }
+        function startTimer() {
+            if (timerId) { clearInterval(timerId); timerId = null; }
+            timerStart = Date.now();
+            timerElapsed = 0;
+            if (timerEl) timerEl.textContent = '00:00';
+            timerId = setInterval(tickTimer, 1000);
+        }
+        function stopTimer() {
+            if (timerId) { clearInterval(timerId); timerId = null; }
+            if (timerStart) tickTimer();
+        }
+
         // ---------- 初始化游戏 ----------
 
         function initGame(difficulty) {
@@ -462,6 +493,7 @@
             updateMagnifyButton();
             victoryModal.classList.remove('show');
             failModal.classList.remove('show');
+            startTimer();
         }
 
         // ---------- 渲染网格 ----------
@@ -1012,7 +1044,7 @@
 
                 failMsg.textContent = '💥 条件不满足！与该雷相邻且同宫的格子中，正确数字不足 3 个，铲雷失败！';
                 setTimeout(() => {
-                    failModal.classList.add('show');
+                    stopTimer(); failModal.classList.add('show');
                 }, 500);
             }
         }
@@ -1093,7 +1125,7 @@
 
                 failMsg.textContent = '💥 你填到了一个有地雷的格子，游戏结束！';
                 setTimeout(() => {
-                    failModal.classList.add('show');
+                    stopTimer(); failModal.classList.add('show');
                 }, 500);
                 return;
             }
@@ -1136,6 +1168,12 @@
         function showVictory() {
             const diffNames = { classic: '经典', easy: '简单', hard: '困难', '17': '17数' };
             victoryMsg.textContent = state.difficulty === 'classic' ? '难度：经典 | 数独完成！' : `难度：${diffNames[state.difficulty]} | 所有地雷已铲除，数独完成！`;
+            var bestKey = 'sudoku-best-' + state.difficulty;
+            var best = 0;
+            try { best = parseInt(localStorage.getItem(bestKey) || '0', 10) || 0; } catch (e) {}
+            var isBest = !best || timerElapsed < best;
+            if (isBest) { try { localStorage.setItem(bestKey, String(timerElapsed)); } catch (e) {} best = timerElapsed; }
+            victoryMsg.textContent += ' | 用时 ' + fmtTime(timerElapsed) + (isBest ? ' · 新纪录' : ' · 最佳 ' + fmtTime(best));
             victoryModal.classList.add('show');
         }
 

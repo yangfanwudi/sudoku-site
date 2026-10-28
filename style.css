@@ -792,6 +792,7 @@ body{display:block;background:radial-gradient(900px 500px at 50% -10%,#2a2450 0,
 .hero__game .container{max-width:540px;margin:0 auto}
 .game-title{text-align:center;font-size:26px;margin-bottom:6px;background:linear-gradient(90deg,#f7971e,#ffd200);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .difficulty-selector{flex-wrap:wrap}
+.game-info{flex-wrap:wrap;gap:6px 10px}
 .content{padding:42px 22px 8px}
 .content__inner{max-width:900px;margin:0 auto}
 .content h2{font-size:26px;margin:36px 0 12px;color:#fff}
