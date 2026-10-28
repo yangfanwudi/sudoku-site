@@ -8,10 +8,11 @@
 <meta name="robots" content="index,follow">
 <meta name="google-site-verification" content="fCkfI7h9OU4tstCwhGj9X18s-qxIKQ5c6J4GNo-vES8">
 <link rel="canonical" href="https://sudoku.vocabfan.online/sudoku-terms.html">
+<link rel="alternate" type="application/rss+xml" title="数独扫雷博客 RSS" href="https://sudoku.vocabfan.online/feed.xml">
 <meta name="theme-color" content="#0f0c29">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta property="og:site_name" content="数独扫雷">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="数独术语中英对照：Row、Box、Naked Single、X-Wing | 数独扫雷">
 <meta property="og:description" content="看英文数独攻略必备：盘面、候选、技巧术语中英对照，附一句话解释。">
@@ -34,7 +35,8 @@
     <nav class="site-nav" aria-label="主导航">
       <a href="index.html">游戏</a>
       <a href="how-to-play.html">玩法</a>
-      <a href="strategies.html" class="active" aria-current="page">技巧</a>
+      <a href="strategies.html">技巧</a>
+      <a href="blog.html" class="active" aria-current="page">博客</a>
       <a href="about.html">关于</a>
       <a href="feedback.html">反馈</a>
     </nav>
@@ -44,6 +46,7 @@
 <main class="page">
   <p class="crumbs"><a href="index.html">首页</a> / 技巧 / 术语</p>
   <h1>数独术语中英对照：从 Row 到 X-Wing</h1>
+  <p class="article-meta">2026-10-28 · 数独扫雷 · 约 5 分钟</p>
   <p class="page-lead">看英文攻略、逛 r/sudoku 时，术语对不上很吃亏。这份对照表按“盘面 → 候选 → 技巧”排序；中文译名不统一，括号里是常见叫法。</p>
 
   <h2>一、盘面</h2>
@@ -92,6 +95,15 @@
   <h2>四、怎么用这张表</h2>
   <p>看英文攻略时，先认 Row/Column/Box 和 Candidate，再看技巧名。中文社区常把 Pointing/Claiming 都叫“区块摒除”，把 Naked Single 叫“唯一候选”，所以看到译名不一致不用慌，对照英文即可。</p>
 
+  <div class="share">
+    <span>分享：</span>
+    <a href="https://twitter.com/intent/tweet?text=%E6%95%B0%E7%8B%AC%E6%9C%AF%E8%AF%AD%E4%B8%AD%E8%8B%B1%E5%AF%B9%E7%85%A7%EF%BC%9A%E4%BB%8E%20Row%20%E5%88%B0%20X-Wing&amp;url=https%3A%2F%2Fsudoku.vocabfan.online%2Fsudoku-terms.html" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsudoku.vocabfan.online%2Fsudoku-terms.html&amp;title=%E6%95%B0%E7%8B%AC%E6%9C%AF%E8%AF%AD%E4%B8%AD%E8%8B%B1%E5%AF%B9%E7%85%A7%EF%BC%9A%E4%BB%8E%20Row%20%E5%88%B0%20X-Wing" target="_blank" rel="noopener">Reddit</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsudoku.vocabfan.online%2Fsudoku-terms.html" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fsudoku.vocabfan.online%2Fsudoku-terms.html&amp;title=%E6%95%B0%E7%8B%AC%E6%9C%AF%E8%AF%AD%E4%B8%AD%E8%8B%B1%E5%AF%B9%E7%85%A7%EF%BC%9A%E4%BB%8E%20Row%20%E5%88%B0%20X-Wing" target="_blank" rel="noopener">微博</a>
+    <button type="button" class="copy-link" data-url="https://sudoku.vocabfan.online/sudoku-terms.html">复制链接</button>
+  </div>
+
   <h2>相关阅读</h2>
   <ul class="related">
     <li><a href="strategies.html">数独技巧：从唯一候选到 X-Wing</a></li>
@@ -120,6 +132,7 @@
     </div>
     <div>
       <h4>站</h4>
+      <a href="blog.html">博客</a>
       <a href="about.html">关于本站</a>
       <a href="privacy.html">隐私政策</a>
       <a href="feedback.html">反馈与建议</a>
@@ -132,6 +145,27 @@
   <div class="site-footer__bottom">© 2026 数独扫雷 · 非官方站点，与任何游戏厂商无关 · 本站不使用账号系统，游戏数据只留在你的浏览器里。</div>
 </footer>
 <a class="feedback-fab" href="feedback.html" aria-label="反馈与建议">💬 反馈</a>
-
+<script>
+document.querySelectorAll('.copy-link').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var url = btn.getAttribute('data-url');
+    function done() {
+      btn.textContent = '已复制';
+      setTimeout(function () { btn.textContent = '复制链接'; }, 1500);
+    }
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = url;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, fallback);
+    } else fallback();
+  });
+});
+</script>
 </body>
 </html>

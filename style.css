@@ -834,6 +834,17 @@ details p{margin:10px 0 0;color:#b8b1cf}
 .page th{background:rgba(255,255,255,.05);color:#fff;font-weight:600}
 .page .related{list-style:none;padding:0;display:grid;gap:8px;margin:14px 0 0}
 .page .related a{color:#ffd76a}
+.article-meta{color:#8f88aa;font-size:13px;margin:0 0 18px}
+.share{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:24px 0;font-size:13px;color:#8f88aa}
+.share a,.share button{border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cfc8e6;border-radius:8px;padding:6px 11px;text-decoration:none;font-size:12.5px;cursor:pointer;font-family:inherit}
+.share a:hover,.share button:hover{border-color:#ffd76a;color:#ffd76a}
+.blog-list{display:grid;gap:14px;margin:22px 0}
+.blog-card{display:block;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit}
+.blog-card:hover{border-color:#ffd76a}
+.blog-tag{font-size:11px;color:#ffd76a;border:1px solid rgba(255,210,0,.28);background:rgba(255,210,0,.06);padding:3px 8px;border-radius:999px}
+.blog-card h2{font-size:20px;margin:8px 0 6px;color:#fff}
+.blog-card p{margin:0;color:#a9a3c2;font-size:14px;line-height:1.8}
+.blog-date{display:block;margin-top:8px;color:#6f6888;font-size:12px}
 .crumbs{font-size:13px;color:#7f7899;margin-bottom:14px}
 .crumbs a{color:#a9a3c2;text-decoration:none}
 .fb-wrap{max-width:860px;margin:0 auto;padding:40px 22px 30px}

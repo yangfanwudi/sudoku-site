@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>数独扫雷博客</title>
+  <link>https://sudoku.vocabfan.online/blog.html</link>
+  <description>数独规则、技巧、17 数与术语。</description>
+  <language>zh-CN</language>
+  <lastBuildDate>Wed, 28 Oct 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>17 数数独：为什么 17 个提示是极限？</title>
+    <link>https://sudoku.vocabfan.online/17-clues.html</link>
+    <guid isPermaLink="true">https://sudoku.vocabfan.online/17-clues.html</guid>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <description>16 个提示为什么不可能有唯一解？17 数题的难点与本站 17 数模式玩法。</description>
+  </item>
+  <item>
+    <title>数独扫雷和普通数独有什么区别？</title>
+    <link>https://sudoku.vocabfan.online/sudoku-minesweeper-difference.html</link>
+    <guid isPermaLink="true">https://sudoku.vocabfan.online/sudoku-minesweeper-difference.html</guid>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <description>用一张表对比普通数独与数独扫雷的规则、失败条件和玩法差异。</description>
+  </item>
+  <item>
+    <title>数独术语中英对照：从 Row 到 X-Wing</title>
+    <link>https://sudoku.vocabfan.online/sudoku-terms.html</link>
+    <guid isPermaLink="true">https://sudoku.vocabfan.online/sudoku-terms.html</guid>
+    <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+    <description>盘面、候选与技巧术语的中英对照表，附一句话解释。</description>
+  </item>
+</channel>
+</rss>
