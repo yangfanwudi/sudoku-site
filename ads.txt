@@ -1,0 +1,2 @@
+# 本站尚未启用 AdSense。审核通过后，把下面一行的 pub-XXXXXXXXXXXXXXXX 换成你的发布商 ID，并取消注释：
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
