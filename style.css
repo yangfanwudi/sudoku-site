@@ -804,7 +804,7 @@ body{display:block;background:radial-gradient(900px 500px at 50% -10%,#2a2450 0,
 .steps{list-style:none;padding:0;display:grid;gap:12px}
 .steps li{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 .steps b{color:#ffd76a}
-.mode-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.mode-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;margin:18px 0}
 .mode{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:14px}
 .mode h3{margin:0 0 6px;font-size:16px;color:#fff}
 .mode p{margin:0;font-size:13px;line-height:1.7;color:var(--muted)}

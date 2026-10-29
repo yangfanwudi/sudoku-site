@@ -3,10 +3,26 @@
 // ============================================================
 
 // ---------- 工具函数 ----------
+let rng = Math.random;
+function setRng(fn) { rng = (typeof fn === 'function') ? fn : Math.random; }
+function mulberry32(seed) {
+    let t = seed >>> 0;
+    return function () {
+        t += 0x6D2B79F5;
+        let r = Math.imul(t ^ (t >>> 15), 1 | t);
+        r ^= r + Math.imul(r ^ (r >>> 7), 61 | r);
+        return ((r ^ (r >>> 14)) >>> 0) / 4294967296;
+    };
+}
+function dailySeed() {
+    const d = new Date(Date.now() + 8 * 3600 * 1000);
+    return d.getUTCFullYear() * 10000 + (d.getUTCMonth() + 1) * 100 + d.getUTCDate();
+}
+
 
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(rng() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
@@ -105,6 +121,9 @@ function generatePuzzle(difficulty) {
             break;
         case 'classic':
             cellsToRemove = 40;
+            break;
+        case 'daily':
+            cellsToRemove = 45;
             break;
         default:
             cellsToRemove = 30;
@@ -231,6 +250,7 @@ function checkVictory(puzzle, solution, playerGrid, mineMap) {
 function getMineCount(difficulty) {
     switch (difficulty) {
         case 'classic': return 0;
+        case 'daily': return 10;
         case 'easy': return 5;
         case 'hard': return 10;
         case '17': return 12;
