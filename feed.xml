@@ -3,7 +3,7 @@
 <channel>
   <title>数独扫雷博客</title>
   <link>https://sudoku.vocabfan.online/blog.html</link>
-  <description>数独规则、技巧、17 数与术语。</description>
+  <description>数独规则、技巧、17 数、每日挑战、难度与术语。</description>
   <language>zh-CN</language>
   <lastBuildDate>Thu, 29 Oct 2026 00:00:00 GMT</lastBuildDate>
   <item>
@@ -12,6 +12,20 @@
     <guid isPermaLink="true">https://sudoku.vocabfan.online/daily-sudoku.html</guid>
     <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
     <description>全站同一天同一盘，固定 10 颗雷、45 个空格；换题时间、最佳成绩和每天 10 分钟的玩法。</description>
+  </item>
+  <item>
+    <title>数独扫雷新手最常犯的 6 个错误</title>
+    <link>https://sudoku.vocabfan.online/common-mistakes.html</link>
+    <guid isPermaLink="true">https://sudoku.vocabfan.online/common-mistakes.html</guid>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+    <description>红底当答案、没填够 3 个就铲雷、不写候选、17 数硬猜；6 个错误和修正方法。</description>
+  </item>
+  <item>
+    <title>数独扫雷四种难度怎么选？经典、简单、困难、17 数对比</title>
+    <link>https://sudoku.vocabfan.online/difficulty-guide.html</link>
+    <guid isPermaLink="true">https://sudoku.vocabfan.online/difficulty-guide.html</guid>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+    <description>提示数、空格、地雷和适合人群对比，附每日挑战定位与两周进阶路线。</description>
   </item>
   <item>
     <title>17 数数独：为什么 17 个提示是极限？</title>

@@ -63,7 +63,7 @@
 
   <h2>二、为什么每个人盘面一样</h2>
   <p>每日挑战用“北京时间日期”当随机种子：2026-10-29 对应一个固定种子，程序用它生成盘面和地雷位置。所以不需要服务器下发题目，纯前端也能做到全站同题；到了第二天 0 点，日期变了，题目自然就换了。</p>
-  <p>这也意味着：同一天刷新、换浏览器、换手机，盘面都不会变；想重做只能换个浏览器或清掉本地数据。</p>
+  <p>这也意味着：同一天刷新、换浏览器、换手机，盘面都不会变；想重做直接刷新或点「新游戏」即可，最佳成绩只保留最好的一次。</p>
 
   <h2>三、和四种难度有什么不同</h2>
   <table>
@@ -77,6 +77,8 @@
     </tbody>
   </table>
 
+  <div class="ad-slot" data-ad-slot="articleMid"></div>
+
   <h2>四、每天 10 分钟怎么玩</h2>
   <ol>
     <li>先看红底数字，判断哪片区域雷多，别一上来就填；</li>
@@ -87,7 +89,7 @@
 
   <h2>五、常见问题</h2>
   <details><summary>刷新会换题吗？</summary><p>不会。同一天种子不变，刷新后还是同一盘；第二天 0 点后才换。</p></details>
-  <details><summary>0 点还没做完怎么办？</summary><p>到点会换新题，昨天的进度不会保留；建议当天做完，或者先截图记盘面。</p></details>
+  <details><summary>0 点还没做完怎么办？</summary><p>页面不会自动换题；刷新或重新开局后，新一局会按新日期出题。昨天的盘面不会保留，建议当天做完。</p></details>
   <details><summary>时区怎么算？</summary><p>按北京时间（UTC+8）换题，不管你在哪个时区，全站都是同一时间换。</p></details>
   <details><summary>最佳成绩存在哪？</summary><p>只存在你的浏览器本地（localStorage），按日期分开；换设备不会同步，清缓存会清空。</p></details>
   <details><summary>每日挑战有几条命？</summary><p>和普通模式一样，填到雷或铲雷失败就结束本局；可以重新开始同一天的题。</p></details>
@@ -106,7 +108,10 @@
     <li><a href="how-to-play.html">完整规则：数独 + 扫雷怎么玩</a></li>
     <li><a href="strategies.html">数独技巧：从唯一候选到 X-Wing</a></li>
     <li><a href="17-clues.html">17 数数独：为什么 17 个提示是极限？</a></li>
+    <li><a href="difficulty-guide.html">四种难度怎么选？</a></li>
   </ul>
+
+  <div class="ad-slot" data-ad-slot="articleEnd"></div>
 
   <div class="cta">
     <a class="btn btn--primary" href="index.html#game">去做今天的每日挑战</a>
