@@ -28,4 +28,4 @@ python -m http.server 8080
 
 ## 广告位
 
-首页与文章页预留了 `.ad-slot` 容器，审核通过前为空、不显示。AdSense 脚本注释在 `index.html` 等页面的 `<head>` 中。
+首页与文章页预留了 `.ad-slot` 容器，审核通过前为空、不显示。AdSense 发布商 ID 和广告单元 ID 统一在 `build-sudoku.mjs` 顶部的 `ADSENSE_PUB_ID` / `ADSENSE_SLOTS` 配置；填入后重建，脚本和 ads.txt 会自动生成。

@@ -813,6 +813,7 @@ summary{cursor:pointer;color:#fff;font-weight:600}
 details p{margin:10px 0 0;color:#b8b1cf}
 .ad-slot{margin:26px auto;max-width:970px}
 .ad-slot:empty{display:none}
+.ad-slot::before{content:"广告";display:block;text-align:center;font-size:11px;letter-spacing:.08em;color:var(--muted);margin:0 0 6px}
 .site-footer{border-top:1px solid var(--line);margin-top:50px;background:rgba(8,6,18,.6)}
 .site-footer__inner{max-width:1180px;margin:0 auto;padding:34px 22px 20px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:26px}
 .site-footer h4{font-size:13px;color:#fff;margin:0 0 10px}
